@@ -1,0 +1,31 @@
+Initialize your list and read in the value of followed by lines of commands where each command will be of the types listed above. Iterate through each command in order and perform the corresponding operation on your list.
+
+if __name__ == '__main__':
+    N = int(input())
+    arr = list()
+    x = 0
+    y = 0
+    
+for i in range(1,N+1):
+    
+    cmd = list(map(str, input().split()))
+    if cmd[0] == "insert":
+        x = int(cmd[2])
+        y = int(cmd[1])
+        arr.insert(y,x)
+    
+    if cmd[0] == "print":
+        print(arr)
+    if cmd[0] == "remove":
+        arr.remove(int(cmd[1]))
+    if cmd[0] == "append":
+        arr.append(int(cmd[1]))
+        
+    if cmd[0] == "sort":
+        arr.sort()
+        
+    if cmd[0] == "pop":
+        arr.pop()
+        
+    if cmd[0] == "reverse":
+        arr.reverse()
