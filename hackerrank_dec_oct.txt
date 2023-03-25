@@ -1,0 +1,16 @@
+Given an integer, , print the following values for each integer  from  to :
+
+Decimal
+Octal
+Hexadecimal (capitalized)
+Binary
+
+
+def print_formatted(number):
+    # your code goes here
+    pad = number.bit_length()
+    
+    for i in range(1,n+1):
+        print(str(i).rjust(pad),oct(i)[2:].rjust(pad),hex(i)[2:].upper().rjust(pad),bin(i)[2:].rjust(pad))
+
+if __name__ == '__main__':
